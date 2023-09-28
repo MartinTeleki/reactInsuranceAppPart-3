@@ -24,7 +24,7 @@ export function NavBar({
 
     // console.log(storedEvidence);
   }
-
+  // console.log(isAdmin);
   return (
     <div>
       <nav className="navbar">
@@ -68,7 +68,11 @@ export function NavBar({
             isAdmin={isAdmin}
           />
 
-          <NavContact changePage={changePage} isLoggedIn={isLoggedIn} />
+          <NavContact
+            changePage={changePage}
+            isLoggedIn={isLoggedIn}
+            isAdmin={isAdmin}
+          />
 
           <NavLoginJmeno
             changePage={changePage}
@@ -141,6 +145,7 @@ function NavEvidence({ changePage, isLoggedIn, isAdmin }) {
   );
 }
 function NavContact({ changePage, isLoggedIn, isAdmin }) {
+  // console.log(isAdmin);
   return (
     <div>
       {!isAdmin && (
