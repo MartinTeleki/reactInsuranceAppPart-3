@@ -293,6 +293,21 @@ function Main({
           <UserInformation loginData={loginData} evidenceList={evidenceList} />
         </div>
       )}
+
+      {/* {currentPage === "udalosti" && (
+        <div className="">
+          <Events loginData={loginData} evidenceList={evidenceList} />
+        </div>
+      )} */}
     </div>
   );
+
+  // function Events() {
+  //   console.log("pes");
+  //   return (
+  //     <div>
+  //       <p>Pes</p>
+  //     </div>
+  //   );
+  // }
 }

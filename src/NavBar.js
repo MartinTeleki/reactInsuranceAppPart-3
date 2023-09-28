@@ -60,7 +60,7 @@ export function NavBar({
             showInsuranceTypes={showInsuranceTypes}
           />
 
-          <NavUdalosti changePage={changePage} isLoggedIn={isLoggedIn} />
+          {/* <NavUdalosti changePage={changePage} isLoggedIn={isLoggedIn} /> */}
 
           <NavEvidence
             changePage={changePage}
@@ -140,10 +140,10 @@ function NavEvidence({ changePage, isLoggedIn, isAdmin }) {
     </div>
   );
 }
-function NavContact({ changePage, isLoggedIn }) {
+function NavContact({ changePage, isLoggedIn, isAdmin }) {
   return (
     <div>
-      {!isLoggedIn && (
+      {!isAdmin && (
         <li>
           <a href="#" alt="kontakt" onClick={() => changePage("contact")}>
             Contact
@@ -186,19 +186,19 @@ function NavPojisteni({ changePage, isLoggedIn, setShowInsuranceTypes }) {
     </div>
   );
 }
-function NavUdalosti({ changePage, isLoggedIn }) {
-  return (
-    <div>
-      {isLoggedIn && (
-        <li>
-          <a href="#" alt="udalosti" onClick={() => changePage("Udalosti")}>
-            Udalosti
-          </a>
-        </li>
-      )}
-    </div>
-  );
-}
+// function NavUdalosti({ changePage, isLoggedIn }) {
+//   return (
+//     <div>
+//       {isLoggedIn && (
+//         <li>
+//           <a href="#" alt="udalosti" onClick={() => changePage("udalosti")}>
+//             Udalosti
+//           </a>
+//         </li>
+//       )}
+//     </div>
+//   );
+// }
 function NavOdhlasit({ changePage, isLoggedIn, setIsLoggedIn, setIsAdmin }) {
   // console.log(setIsAdmin);
   return (
