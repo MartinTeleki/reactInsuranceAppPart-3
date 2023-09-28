@@ -8,6 +8,7 @@ import { NavBar } from "./NavBar";
 import { Footer } from "./Footer";
 import Pojistenci from "./Pojistenci";
 import { Pojisteni } from "./Pojisteni";
+import { UserInformation } from "./UserInformation";
 
 export default function App() {
   const initialRegistrationInfo = {
@@ -131,7 +132,7 @@ export default function App() {
       if (email === "martinteleki@seznam.cze") {
         setIsAdmin(true);
       }
-      changePage("evidence");
+      changePage("login-jmeno");
       setIsLoggedIn(true);
     } else {
       changePage("login");
@@ -292,36 +293,6 @@ function Main({
           <UserInformation loginData={loginData} evidenceList={evidenceList} />
         </div>
       )}
-    </div>
-  );
-}
-
-function UserInformation({ loginData, evidenceList }) {
-  const user = evidenceList.find((person) => person.email === loginData.email);
-  console.log(evidenceList);
-  console.log(user);
-
-  return (
-    <div>
-      <h2>Osobní údaje uživatele {user.firstName}</h2>
-      <p>Jméno: {user.firstName}</p>
-      <p>Příjmení: {user.lastName}</p>
-      <p>Město: {user.city}</p>
-      <p>Heslo: {user.password}</p>
-      <p>Email: {user.email}</p>
-      <p>Pohlaví: {user.gender}</p>
-      <p>Identifikační číslo: {user.id}</p>
-      <p>Kód pojištění: {user.insuranceCode}</p>
-      <p>Číslo pojištění: {user.insuranceNumber} </p>
-      <p>Předmět pojištění: {user.insuranceSubject}</p>
-      <p>Typ pojištění: {user.insuranceType}</p>
-      <p>Roční platba za pojištění: {user.insuredAmount} </p>
-      <p>Telefonní číslo: {user.phoneNumber}</p>
-      <p>
-        Všeobecné podmínky byly splněny : {user.termsAccepted ? "Ano" : "Ne"}
-      </p>
-      <p>Platnost pojištění od: {user.validityFrom}</p>
-      <p>Platnost pojištění do: {user.validityTo}</p>
     </div>
   );
 }

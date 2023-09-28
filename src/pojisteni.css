@@ -7,7 +7,7 @@
 }
 
 .insurance-police-holder-box {
-  border: 0.0625rem solid white;
+  border: 0.0625rem solid black;
   padding: 0.625rem 0;
   color: white;
   margin: 0 10px;
@@ -17,7 +17,7 @@
   text-align: center;
   color: #fff;
   text-transform: uppercase;
-  margin: 40px 0;
+  margin-top: 20px;
 }
 
 .insurance-police-holder-description {
@@ -30,8 +30,12 @@
   cursor: pointer;
 }
 
+.insurance-police-holder-box-span:hover {
+  text-decoration: underline;
+}
+
 .insurance-police-holder-box h2 {
-  margin: 10px;
+  margin-top: 10px;
 }
 
 .insurance-police-holder-box p {
