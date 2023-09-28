@@ -1,0 +1,355 @@
+html {
+  font-size: 16px;
+}
+
+.table-container {
+  background: #2d3e3f;
+  height: 75rem;
+}
+
+.table {
+  display: flex;
+  flex-direction: column;
+  border: 0.0625rem solid black;
+  overflow: hidden;
+  color: white;
+}
+
+.title-container {
+}
+
+.table-title {
+  display: flex;
+  text-align: left;
+  color: white;
+  margin: 0 0 0 6.25rem;
+  padding-top: 3.75rem;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem;
+  border-bottom: 0.0625rem solid black;
+}
+
+.table-cell {
+  flex: 1;
+}
+
+.table-name {
+  margin-left: 6.25rem;
+  flex: 2;
+}
+
+.policyholder-margin {
+}
+
+.hidden {
+  display: none;
+}
+
+.names-nav:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  text-decoration: underline white;
+}
+
+/* butttons */
+
+.new-policyholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 1.25rem auto 1.25rem auto;
+  padding: 0.625rem 0.9375rem;
+  text-transform: uppercase;
+  background: #a2ff00;
+  color: black;
+  cursor: pointer;
+}
+
+.new-policyholder:hover {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 1.25rem auto 1.25rem auto;
+  padding: 0.625rem 0.9375rem;
+  text-transform: uppercase;
+  background: #a2ff00;
+  color: black;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.new-policyholder:active {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  margin: 1.25rem auto 1.25rem auto;
+  padding: 0.625rem 0.9375rem;
+  text-transform: uppercase;
+  background: #a2ff00;
+  color: black;
+  cursor: pointer;
+  opacity: 0.8;
+  transform: scale(0.96);
+}
+
+.btn-editovat,
+.btn-odstranit {
+  text-transform: uppercase;
+  padding: 0.3125rem 0.625rem;
+  cursor: pointer;
+}
+
+.btn-editovat {
+  background: #ffff00;
+}
+
+.btn-odstranit {
+  background: #d11a2a;
+}
+
+.btn-editovat:hover,
+.btn-odstranit:hover {
+  text-transform: uppercase;
+  padding: 0.3125rem 0.625rem;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.btn-editovat:active,
+.btn-odstranit:active {
+  text-transform: uppercase;
+  padding: 0.3125rem 0.625rem;
+  cursor: pointer;
+  transform: scale(0.96);
+}
+
+.disabled {
+  cursor: none;
+}
+
+.disabled:hover,
+.disabled:active,
+.disabled:focus {
+  cursor: default;
+  opacity: 0;
+}
+
+/* pagination */
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+.pagination-item {
+  background-color: #2d3e3f;
+  color: white;
+  border: 0.0625rem solid #fff;
+  padding: 0.3125rem 0.625rem;
+  margin: 0 0.3125rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination-item:hover {
+  background-color: #fff;
+  color: #2d3e3f;
+}
+
+.pagination-item.active {
+  background-color: #fff;
+  color: #2d3e3f;
+  cursor: default;
+}
+
+.pagination-item.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Pojištěnci */
+
+.policyholder-form {
+  max-width: 25rem;
+  margin: 0 auto;
+  height: 42.5rem;
+
+  padding: 1.25rem 1.875rem;
+  background-color: #f4f4f4;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.3125rem;
+  box-shadow: 0 0 0.3125rem 0 #ddd;
+}
+
+.form-group {
+  margin-bottom: 0.9375rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.3125rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.625rem;
+  border: 0.0625rem solid #ddd;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+}
+
+.form-group select {
+  height: 2.5rem;
+}
+
+/* buttony */
+
+button[type="submit"] {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #258cd1;
+}
+
+.btn-add-insurance-person {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-add-insurance-person:active {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transform: scale(0.96);
+}
+
+/* pojistenci.css */
+
+.policyholder-details {
+  background-color: #f0f0f0;
+  padding: 0.625rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+  margin-top: 0.625rem;
+}
+
+.policyholder-details h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+
+.policyholder-details p {
+  font-size: 1rem;
+  margin-bottom: 0.3125rem;
+}
+
+.policyholder-details button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  margin-top: 0.625rem;
+}
+
+.policyholder-details button:hover {
+  background-color: #0056b3;
+}
+
+/* pojistenci.css */
+
+.policyholder-edit {
+  background-color: #f0f0f0;
+  padding: 1.25rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+  margin: 1.25rem 0;
+}
+
+.policyholder-edit h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.625rem;
+}
+
+.form-group {
+  margin-bottom: 0.9375rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.3125rem;
+  font-weight: bold;
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 0.625rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+}
+
+.btn-save {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 0.3125rem;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.625rem;
+}
+
+.btn-save:hover {
+  background-color: #0056b3;
+}
+
+.btn-cancel {
+  background-color: #ccc;
+  color: #000;
+  border: none;
+  border-radius: 0.3125rem;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-cancel:hover {
+  background-color: #999;
+}
