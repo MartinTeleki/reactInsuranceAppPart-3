@@ -9,6 +9,8 @@ export function Footer() {
         <a
           href="https://github.com/MartinTeleki?tab=repositories"
           className="footer-link"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Mgr. Martin Teleki
         </a>
