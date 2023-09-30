@@ -1,3 +1,10 @@
+:root {
+  --background-color-black: #333;
+  --color-white: #fff;
+  --background-color-green: #a2ff00;
+  --background-color-steelblue: steelblue;
+}
+
 html {
   font-size: 1rem;
   letter-spacing: 0.6px;
@@ -12,7 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: steelblue;
+  background: var(--background-color-steelblue);
 }
 
 .App {
@@ -24,115 +31,9 @@ button {
   border-radius: 0.625rem;
 }
 
-/* .navbar {
-  margin: 0;
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.625rem 1.25rem;
-}
-
-.navbar p {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.logo {
-  margin-left: 0.625rem;
-  margin-right: 0.625rem;
-}
-
-.nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.nav-links li {
-  margin-right: 0.9375rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-/* -Hamburger- */
-/* .bar-container {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  align-items: center;
-  padding: 0.625rem;
-}
-
-.bar {
-  width: 1.5625rem;
-  height: 0.1875rem;
-  background-color: #fff;
-  margin: 0.1875rem 0;
-}
-
-.nav-links a {
-  color: white;
-}
-
-.nav-links .active {
-  color: #a2ff00;
-} */
-*/
-
-
 /* Main */
 
 .main {
-  background-color: steelblue;
+  background-color: var(--background-color-steelblue);
   opacity: 0.8;
 }
-
-/* Register */
-
-/* Footer */
-/* .footer {
-  text-decoration: none;
-  background-color: #333;
-  color: #fff;
-  padding: 1.25rem 0;
-  text-align: center;
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-}
-
-.footer-link {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-.footer-link:hover {
-  text-decoration: underline;
-} */
-
-/* @media screen and (max-width: 43.75rem) {
-  .bar-container {
-    display: flex;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .nav-links.show-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-} */

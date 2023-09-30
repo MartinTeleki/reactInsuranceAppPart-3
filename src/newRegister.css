@@ -2,13 +2,21 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
 
+:root {
+  --backgroud-color-middle-black: #2d3e3f;
+  --color-white: #fff;
+  --background-color-green: #a2ff00;
+  --color-black: #000;
+  --button-register-login-color: #2496ff;
+}
+
 .evidence-margin {
   margin-top: 1.25rem;
   margin-bottom: 12.5rem;
 }
 
 .container {
-  background: #2d3e3f;
+  background: var(--backgroud-color-middle-black);
   width: 21.875rem;
   height: auto;
   padding-bottom: 1.25rem;
@@ -26,7 +34,7 @@
 
 .register-title {
   display: flex;
-  color: white;
+  color: var(--color-white);
   text-align: center;
   justify-content: center;
   font-size: 1.25rem;
@@ -41,7 +49,7 @@
 }
 
 .fontLabel {
-  color: white;
+  color: var(--color-white);
 }
 
 .fr {
@@ -103,7 +111,7 @@ select {
   width: 2.5rem;
   line-height: 2.375rem;
   text-align: center;
-  background: #a2ff00;
+  background: var(--background-color-green);
   transition: transform 0.3s;
 }
 
@@ -112,7 +120,7 @@ select {
   width: 2.5rem;
   line-height: 2.375rem;
   text-align: center;
-  background: #a2ff00;
+  background: var(--background-color-green);
   opacity: 0.9;
   transform: scale(0.96);
 }
@@ -120,17 +128,17 @@ select {
 .terms {
   line-height: 2.1875rem;
   text-align: center;
-  background: #2d3e3f;
-  color: white;
+  background: var(--backgroud-color-middle-black);
+  color: var(--color-white);
 }
 
 .submit {
   float: right;
   border: none;
-  color: black;
+  color: var(--background-color-black);
   width: 6.875rem;
   height: 2.1875rem;
-  background: #a2ff00;
+  background: var(--background-color-green);
   text-transform: uppercase;
   cursor: pointer;
   transition: transform ease 0.1s;
@@ -142,7 +150,7 @@ select {
   color: black;
   width: 6.875rem;
   height: 2.1875rem;
-  background: #a2ff00;
+  background: var(--background-color-green);
   text-transform: uppercase;
   cursor: pointer;
   opacity: 0.9;
@@ -152,10 +160,10 @@ select {
 .submit:active {
   float: right;
   border: none;
-  color: black;
+  color: var(--color-black);
   width: 6.875rem;
   height: 2.1875rem;
-  background: #a2ff00;
+  background: var(--background-color-green);
   text-transform: uppercase;
   cursor: pointer;
   opacity: 0.9;
@@ -164,7 +172,7 @@ select {
 
 /* btn swap */
 .btn-login-swap:hover {
-  color: #2496ff;
+  color: var(--button-register-login-color);
   opacity: 0.8;
   cursor: pointer;
 }
@@ -201,7 +209,7 @@ select {
 /* media for small app */
 @media (max-width: 3.125rem) {
   .container {
-    background: #2d3e3f;
+    background: var(--backgroud-color-middle-black);
     width: 21.875rem;
     height: auto;
     padding-bottom: 1.25rem;
@@ -226,7 +234,7 @@ select {
     width: 2.5rem;
     line-height: 2.5rem;
     text-align: center;
-    background: #a2ff00;
+    background: var(--background-color-green);
     transition: transform 0.3s;
   }
 
@@ -235,7 +243,7 @@ select {
     width: 2.5rem;
     line-height: 2.5rem;
     text-align: center;
-    background: #a2ff00;
+    background: var(--background-color-green);
     transition: transform 0.3s;
   }
 
@@ -263,7 +271,7 @@ select {
 /* media for smaller apps under 400px */
 @media (max-width: 400px) {
   .container {
-    background: #2d3e3f;
+    background: var(--backgroud-color-middle-black);
     width: 21.875rem;
     height: auto;
     padding-bottom: 1.25rem;
@@ -288,7 +296,7 @@ select {
     width: 2.5rem;
     line-height: 2.5rem;
     text-align: center;
-    background: #a2ff00;
+    background: var(--background-color-green);
     transition: transform 0.3s;
   }
 
@@ -297,7 +305,7 @@ select {
     width: 2.5rem;
     line-height: 2.5rem;
     text-align: center;
-    background: #a2ff00;
+    background: var(--background-color-green);
     transition: transform 0.3s;
   }
 
@@ -326,7 +334,7 @@ select {
 /* media for smaller app under 380px*/
 @media (max-width: 380px) {
   .container {
-    background: #2d3e3f;
+    background: var(--backgroud-color-middle-black);
     width: 21.5rem;
     height: auto;
     padding-bottom: 1.25rem;
@@ -351,7 +359,7 @@ select {
     width: 2.5rem;
     line-height: 2.5rem;
     text-align: center;
-    background: #a2ff00;
+    background: var(--background-color-green);
     transition: transform 0.3s;
   }
 
@@ -360,7 +368,7 @@ select {
     width: 2.5rem;
     line-height: 2.5rem;
     text-align: center;
-    background: #a2ff00;
+    background: var(--background-color-green);
     transition: transform 0.3s;
   }
 

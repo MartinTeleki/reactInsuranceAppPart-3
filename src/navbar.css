@@ -1,8 +1,14 @@
 /* navbar of app */
 
+:root {
+--background-color-black: #333;
+--color-white: #fff;
+--background-color-green: #a2ff00
+}
+
 .navbar {
   margin: 0;
-  background-color: #333;
+  background-color: var(--background-color-black);
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -33,7 +39,7 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: var(--color-white);
   font-weight: bold;
 }
 
@@ -53,16 +59,16 @@
 .bar {
   width: 1.5625rem;
   height: 0.1875rem;
-  background-color: #fff;
+  background-color: var(--color-white);
   margin: 0.1875rem 0;
 }
 
 .nav-links a {
-  color: white;
+  color: var(--color-white);
 }
 
 .nav-links .active {
-  color: #a2ff00;
+  color: var(--background-color-green);
 }
 
 /* media for hamburger */

@@ -1,20 +1,36 @@
+:root {
+  --backgroud-color-middle-black: #2d3e3f;
+  --background-color-black: #333;
+  --color-white: #fff;
+  --background-color-green: #a2ff00;
+  --color-dark-white: #f5f5f5;
+  --color-black: #000;
+  --button-register-login-color: #2496ff;
+  --box-color: #0e7a80;
+  --button-edit-color: #ffff00;
+  --button-delete-color: #d11a2a;
+  --border-color-grey: #ddd;
+  --button-color-add-new-insurance: #3498db;
+  --policy-holder-white: #f0f0f0;
+}
+
 html {
   font-size: 16px;
 }
 
 /* capital container xD */
 .table-container {
-  background: #2d3e3f;
+  background: var(--backgroud-color-middle-black);
   height: 75rem;
 }
 
 .table {
   display: flex;
   flex-direction: column;
-  border: 0.0625rem solid black;
+  border: 0.0625rem solid var(--color-black);
   overflow: hidden;
-  color: white;
-  background: #0e7a80;
+  color: var(--color-white);
+  background: var(--box-color);
 }
 
 .title-container {
@@ -23,7 +39,7 @@ html {
 .table-title {
   display: flex;
   text-align: left;
-  color: white;
+  color: var(--color-white);
   margin: 0 0 0 6.25rem;
   padding-top: 3.75rem;
 }
@@ -33,7 +49,7 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 0.625rem;
-  border-bottom: 0.0625rem solid black;
+  border-bottom: 0.0625rem solid var(--color-black);
 }
 
 .table-cell {
@@ -55,7 +71,7 @@ html {
 .names-nav:hover {
   cursor: pointer;
   opacity: 0.8;
-  text-decoration: underline white;
+  text-decoration: underline var(--color-white);
 }
 
 /* butttons */
@@ -70,8 +86,8 @@ html {
   margin: 1.25rem auto 1.25rem auto;
   padding: 0.625rem 0.9375rem;
   text-transform: uppercase;
-  background: #a2ff00;
-  color: black;
+  background: var(--background-color-green);
+  color: var(--color-black);
   cursor: pointer;
 }
 
@@ -83,8 +99,8 @@ html {
   margin: 1.25rem auto 1.25rem auto;
   padding: 0.625rem 0.9375rem;
   text-transform: uppercase;
-  background: #a2ff00;
-  color: black;
+  background: var(--background-color-green);
+  color: var(--color-black);
   cursor: pointer;
   opacity: 0.8;
 }
@@ -97,8 +113,8 @@ html {
   margin: 1.25rem auto 1.25rem auto;
   padding: 0.625rem 0.9375rem;
   text-transform: uppercase;
-  background: #a2ff00;
-  color: black;
+  background: var(--background-color-green);
+  color: var(--color-black);
   cursor: pointer;
   opacity: 0.8;
   transform: scale(0.96);
@@ -112,11 +128,11 @@ html {
 }
 
 .btn-editovat {
-  background: #ffff00;
+  background: var(--button-edit-color);
 }
 
 .btn-odstranit {
-  background: #d11a2a;
+  background: var(--button-delete-color);
 }
 
 .btn-editovat:hover,
@@ -156,9 +172,9 @@ html {
 }
 
 .pagination-item {
-  background-color: #2d3e3f;
-  color: white;
-  border: 0.0625rem solid #fff;
+  background-color: var(--backgroud-color-middle-black);
+  color: var(--color-white);
+  border: 0.0625rem solid var(--color-white);
   padding: 0.3125rem 0.625rem;
   margin: 0 0.3125rem;
   cursor: pointer;
@@ -166,13 +182,13 @@ html {
 }
 
 .pagination-item:hover {
-  background-color: #fff;
-  color: #2d3e3f;
+  background-color: var(--color-white);
+  color: var(--backgroud-color-middle-black);
 }
 
 .pagination-item.active {
-  background-color: #fff;
-  color: #2d3e3f;
+  background-color: var(--color-white);
+  color: var(--backgroud-color-middle-black);
   cursor: default;
 }
 
@@ -189,10 +205,10 @@ html {
   height: 42.5rem;
 
   padding: 1.25rem 1.875rem;
-  background-color: #f4f4f4;
-  border: 0.0625rem solid #ddd;
+  background-color: var(--color-dark-white);
+  border: 0.0625rem solid var(--border-color-grey);
   border-radius: 0.3125rem;
-  box-shadow: 0 0 0.3125rem 0 #ddd;
+  box-shadow: 0 0 0.3125rem 0 var(--border-color-grey);
 }
 
 .form-group {
@@ -209,7 +225,7 @@ html {
 .form-group select {
   width: 100%;
   padding: 0.625rem;
-  border: 0.0625rem solid #ddd;
+  border: 0.0625rem solid var(--border-color-grey);
   border-radius: 0.3125rem;
   font-size: 1rem;
 }
@@ -223,8 +239,8 @@ html {
 button[type="submit"] {
   display: inline-block;
   padding: 0.625rem 1.25rem;
-  background-color: #3498db;
-  color: #fff;
+  background-color: var(--button-color-add-new-insurance);
+  color: var(--color-white);
   border: none;
   border-radius: 0.3125rem;
   font-size: 1rem;
@@ -233,14 +249,14 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #258cd1;
+  background-color: var(--button-register-login-color);
 }
 
 .btn-add-insurance-person {
   display: inline-block;
   padding: 0.625rem 1.25rem;
-  background-color: #3498db;
-  color: #fff;
+  background-color: var(--button-register-login-color);
+  color: var(--color-white);
   border: none;
   border-radius: 0.3125rem;
   font-size: 1rem;
@@ -251,8 +267,8 @@ button[type="submit"]:hover {
 .btn-add-insurance-person:active {
   display: inline-block;
   padding: 0.625rem 1.25rem;
-  background-color: #3498db;
-  color: #fff;
+  background-color: var(--button-register-login-color);
+  color: var(--color-white);
   border: none;
   border-radius: 0.3125rem;
   font-size: 1rem;
@@ -282,7 +298,7 @@ button[type="submit"]:hover {
 
 .policyholder-details button {
   background-color: #007bff;
-  color: #fff;
+  color: var(--color-white);
   border: none;
   padding: 0.3125rem 0.625rem;
   border-radius: 0.3125rem;
@@ -291,15 +307,15 @@ button[type="submit"]:hover {
 }
 
 .policyholder-details button:hover {
-  background-color: #0056b3;
+  background-color: var(--button-color-add-new-insurance);
 }
 
 /* pojistenci.css */
 
 .policyholder-edit {
-  background-color: #f0f0f0;
+  background-color: var(--policy-holder-white);
   padding: 1.9rem;
-  border: 0.0625rem solid #ccc;
+  border: 0.0625rem solid var(--border-color-grey);
   border-radius: 0.3125rem;
   margin: 1.25rem 40px;
 }
@@ -322,14 +338,14 @@ button[type="submit"]:hover {
 .form-group input[type="text"] {
   width: 100%;
   padding: 0.625rem;
-  border: 0.0625rem solid #ccc;
+  border: 0.0625rem solid var(--border-color-grey);
   border-radius: 0.3125rem;
   font-size: 1rem;
 }
 
 .btn-save {
   background-color: #007bff;
-  color: #fff;
+  color: var(--color-white);
   border: none;
   border-radius: 0.3125rem;
   padding: 0.625rem 1.25rem;
@@ -339,12 +355,12 @@ button[type="submit"]:hover {
 }
 
 .btn-save:hover {
-  background-color: #0056b3;
+  background-color: var(--button-color-add-new-insurance);
 }
 
 .btn-cancel {
-  background-color: #ccc;
-  color: #000;
+  background-color: var(--border-color-grey);
+  color: var(--color-black);
   border: none;
   border-radius: 0.3125rem;
   padding: 0.625rem 1.25rem;
@@ -353,5 +369,5 @@ button[type="submit"]:hover {
 }
 
 .btn-cancel:hover {
-  background-color: #999;
+  background-color: var(--border-color-grey);
 }

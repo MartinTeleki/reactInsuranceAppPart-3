@@ -2,6 +2,15 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
 
+:root {
+  --backgroud-color-middle-black: #2d3e3f;
+  --background-color-black: #333;
+  --color-white: #fff;
+  --background-color-green: #a2ff00;
+  --color-dark-white: #f5f5f5;
+  --color-black: #000;
+}
+
 .evidence-container {
   display: flex;
   position: relative;
@@ -10,7 +19,7 @@
   flex-direction: column;
   height: auto;
   max-width: 100%;
-  border: 0.03125rem solid black;
+  border: 0.03125rem solid var(--color-black);
   margin: 50px 20px 50px 20px;
 
   /* letter-spacing: 0.6px; */
@@ -28,9 +37,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: #2d3e3f;
+  background: var(--backgroud-color-middle-black);
   color: white;
-  border: 0.03125rem solid black;
+  border: 0.03125rem solid var(--color-black);
 }
 
 .evidence-item h3 {
@@ -54,7 +63,7 @@
 .btn-delete-container {
   display: flex;
   justify-content: center;
-  background: #2d3e3f;
+  background: var(--backgroud-color-middle-black);
   opacity: 0.9;
 }
 
@@ -62,8 +71,8 @@
   text-transform: uppercase;
   margin: 0.95rem 0;
   padding: 0.625rem 0.9375rem;
-  color: black;
-  background: #a2ff00;
+  color: var(--color-black);
+  background: var(--background-color-green);
   cursor: pointer;
   transition: transform 0.3s;
 }
@@ -71,8 +80,8 @@
 .btn-delete:hover {
   text-transform: uppercase;
   padding: 0.625rem 0.9375rem;
-  color: black;
-  background: #a2ff00;
+  color: var(--color-black);
+  background: var(--background-color-green);
   opacity: 0.9;
   cursor: pointer;
   transform: scale(0.96);
@@ -81,8 +90,8 @@
 .btn-delete:active {
   text-transform: uppercase;
   padding: 0.625rem 0.9375rem;
-  color: black;
-  background: #a2ff00;
+  color: var(--color-black);
+  background: var(--background-color-green);
   opacity: 0.9;
   cursor: pointer;
   transform: scale(0.88);
