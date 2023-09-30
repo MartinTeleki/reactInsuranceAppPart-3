@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./index.css";
 import "./navbar.css";
 export function NavBar({
@@ -22,14 +22,8 @@ export function NavBar({
     setEvidenceList(storedEvidence);
     setNumberOfContracts(storedEvidence);
     changePage("login");
-
-    // console.log(storedEvidence);
   }
 
-  // const [activateNavItem, setActivateNavItem] = useState("");
-  // // console.log(isAdmin);
-
-  function handleChangeNavItemColor() {}
   return (
     <div>
       <nav className="navbar">
@@ -75,8 +69,6 @@ export function NavBar({
             showInsuranceTypes={showInsuranceTypes}
             currentPage={currentPage}
           />
-
-          {/* <NavUdalosti changePage={changePage} isLoggedIn={isLoggedIn} /> */}
 
           <NavEvidence
             changePage={changePage}
@@ -192,7 +184,7 @@ function NavEvidence({ changePage, isLoggedIn, isAdmin, currentPage }) {
   );
 }
 function NavContact({ changePage, isLoggedIn, isAdmin, currentPage }) {
-  // console.log(isAdmin);
+
   return (
     <div>
       {!isAdmin && (
@@ -254,19 +246,7 @@ function NavPojisteni({
     </div>
   );
 }
-// function NavUdalosti({ changePage, isLoggedIn }) {
-//   return (
-//     <div>
-//       {isLoggedIn && (
-//         <li>
-//           <a href="#" alt="udalosti" onClick={() => changePage("udalosti")}>
-//             Udalosti
-//           </a>
-//         </li>
-//       )}
-//     </div>
-//   );
-// }
+
 function NavOdhlasit({
   changePage,
   isLoggedIn,
@@ -274,7 +254,6 @@ function NavOdhlasit({
   setIsAdmin,
   currentPage,
 }) {
-  // console.log(setIsAdmin);
   return (
     <div>
       {isLoggedIn && (

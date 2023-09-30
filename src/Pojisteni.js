@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./pojisteni.css";
-import { type } from "@testing-library/user-event/dist/type";
 
 export function Pojisteni({
   changePage,

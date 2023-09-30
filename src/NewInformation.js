@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./newInformation.css";
 
 export function NewInformation({ evidenceList, numberOfContracts }) {
-  //console.log(evidenceList);
 
   const informationFromJSON =
     JSON.parse(localStorage.getItem("evidenceTEST")) || [];
-  //console.log(informationFromJSON);
 
   const totalInsuranceAmount = informationFromJSON
     .map((item) => Number(item.insuredAmount))
@@ -23,8 +21,6 @@ export function NewInformation({ evidenceList, numberOfContracts }) {
         accumulator + (isNaN(currentValue) ? 0 : currentValue),
       0
     );
-
-  //console.log(totalInsuranceAmount);
 
   const info = {
     numberOfClients: evidenceList.length,

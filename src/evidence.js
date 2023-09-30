@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./newEvidence.css";
-import App from "./App";
 
 export default function NewEvidence({ evidenceList, setEvidenceList }) {
   useEffect(() => {

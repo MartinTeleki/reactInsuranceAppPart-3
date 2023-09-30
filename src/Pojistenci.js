@@ -389,7 +389,6 @@ function PolicyholderDetails({
   mergedData,
   selectedPolicyholder,
   setSelectedPolicyholder,
-  showDetails,
   setShowDetails,
 }) {
   const handleCloseDetails = () => {
@@ -461,7 +460,6 @@ function NewPolicyholderForm({ addPolicyholder, setShowForm }) {
       addPolicyholder(newPolicyholder);
       alert("Registrace proběhla úspěšně");
       setShowForm(false);
-
       setFirstName("");
       setLastName("");
       setPhoneNumber("");

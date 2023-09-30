@@ -1,24 +1,5 @@
 import "./newRegister.css";
 import React, { useState, useEffect } from "react";
-import App from "./App";
-import PropTypes from "prop-types";
-
-// NewRegister.propTypes = {
-//   registrationInfo: PropTypes.object,
-//   setRegistrationInfo: PropTypes.func.isRequired,
-//   changePage: PropTypes.func.isRequired,
-//   firstName: PropTypes.string.isRequired,
-//   lastName: PropTypes.string.isRequired,
-//   email: PropTypes.string,
-//   phoneNumber: PropTypes.number.isRequired,
-//   age: PropTypes.number.isRequired,
-//   password: PropTypes.string,
-//   controlPassword: PropTypes.string,
-//   insuranceNumber: PropTypes.number.isRequired,
-//   insuranceCode: PropTypes.string,
-//   gender: PropTypes.string,
-//   termsAccepted: PropTypes.bool,
-// };
 
 export default function NewRegister({
   registrationInfo,
@@ -42,8 +23,6 @@ export default function NewRegister({
     gender: "",
     termsAccepted: false,
   };
-  //console.log(changePage);
-  // console.log(registrationInfo);
 
   function generateUniqueId() {
     const timestamp = new Date().getTime();
@@ -72,15 +51,11 @@ export default function NewRegister({
     }
   }
 
-  //const existingEvidence = JSON.parse(localStorage.getItem("evidence")) || [];
-  // console.log(existingEvidence);
-
   const updateLocalStorageData = () => {
     const storedEvidence =
       JSON.parse(localStorage.getItem("evidenceTEST")) || [];
     setEvidenceList(storedEvidence);
     setNumberOfContracts(storedEvidence);
-    // console.log(storedEvidence);
   };
 
   function HandleRegisterButton(e) {
@@ -197,8 +172,6 @@ export default function NewRegister({
     changePage("login");
     alert("Registrace byla úspěšně odeslána!");
   }
-
-  //console.log(registrationInfo);
 
   return (
     <div className="container">

@@ -6,15 +6,9 @@ export default function NewLogin({
   loginData,
   setLoginData,
   handleLogin,
-  evidenceList,
-  emailList,
-  setEmailList,
-  passwordList,
-  setPasswordList,
   setIsAdmin,
-  setIsLoggedIn
+  setIsLoggedIn,
 }) {
-  //console.log(emailList);
   function handleLogin(e) {
     e.preventDefault();
 
