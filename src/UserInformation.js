@@ -8,7 +8,13 @@ export function UserInformation({ loginData, evidenceList }) {
 
   return (
     <div className="user-info-container">
-      <h2>Osobní údaje uživatele {user.firstName}</h2>
+      <h2>
+        Osobní údaje uživatele{" "}
+        <span style={{ color: "#a2ff00" }}>
+          {user.firstName} {user.lastName}
+        </span>{" "}
+        .
+      </h2>
       <div className="user-info">
         <div className="user-info-item">
           <strong>Jméno:</strong> {user.firstName}
