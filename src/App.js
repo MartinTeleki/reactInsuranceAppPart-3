@@ -85,60 +85,60 @@ export default function App() {
     setCurrentPage(page);
   }
 
-  function handleLogin(e) {
-    e.preventDefault();
+  // function handleLogin(e) {
+  //   e.preventDefault();
 
-    const evidenceList = JSON.parse(localStorage.getItem("evidenceTEST")) || [];
+  //   const evidenceList = JSON.parse(localStorage.getItem("evidenceTEST")) || [];
 
-    const firstNames = [];
-    const emails = [];
-    const passwords = [];
-    const passwordControls = [];
+  //   const firstNames = [];
+  //   const emails = [];
+  //   const passwords = [];
+  //   const passwordControls = [];
 
-    evidenceList.forEach((item) => {
-      if (item.email && item.email.trim() !== "") {
-        emails.push(item.email);
-      }
-      if (item.password && item.password.trim() !== "") {
-        passwords.push(item.password);
-      }
-      if (item.controlPassword && item.controlPassword.trim() !== "") {
-        passwordControls.push(item.controlPassword);
-      }
-      if (item.firstName && item.firstName.trim() !== "") {
-        firstNames.push(item.firstName);
-      }
-    });
+  //   evidenceList.forEach((item) => {
+  //     if (item.email && item.email.trim() !== "") {
+  //       emails.push(item.email);
+  //     }
+  //     if (item.password && item.password.trim() !== "") {
+  //       passwords.push(item.password);
+  //     }
+  //     if (item.controlPassword && item.controlPassword.trim() !== "") {
+  //       passwordControls.push(item.controlPassword);
+  //     }
+  //     if (item.firstName && item.firstName.trim() !== "") {
+  //       firstNames.push(item.firstName);
+  //     }
+  //   });
 
-    processLogin(emails, passwords, passwordControls, firstNames);
-  }
+  //   processLogin(emails, passwords, passwordControls, firstNames);
+  // }
 
-  function processLogin(emails, passwords, passwordControls) {
-    const { email, password, controlPassword } = loginData;
-    let isLoggedIn = false;
+  // function processLogin(emails, passwords, passwordControls) {
+  //   const { email, password, controlPassword } = loginData;
+  //   let isLoggedIn = false;
 
-    for (let i = 0; i < emails.length; i++) {
-      if (
-        emails[i] === email &&
-        passwords[i] === password &&
-        passwordControls[i] === controlPassword
-      ) {
-        isLoggedIn = true;
-      }
-    }
+  //   for (let i = 0; i < emails.length; i++) {
+  //     if (
+  //       emails[i] === email &&
+  //       passwords[i] === password &&
+  //       passwordControls[i] === controlPassword
+  //     ) {
+  //       isLoggedIn = true;
+  //     }
+  //   }
 
-    if (isLoggedIn) {
-      alert("Úspěšně jste se přihlásili!");
-      if (email === "martinteleki@seznam.cze") {
-        setIsAdmin(true);
-      }
-      changePage("login-jmeno");
-      setIsLoggedIn(true);
-    } else {
-      changePage("login");
-      alert("Nesprávný email, heslo nebo kontrolní heslo.");
-    }
-  }
+  //   if (isLoggedIn) {
+  //     alert("Úspěšně jste se přihlásili!");
+  //     if (email === "martinteleki@seznam.cze") {
+  //       setIsAdmin(true);
+  //     }
+  //     changePage("login-jmeno");
+  //     setIsLoggedIn(true);
+  //   } else {
+  //     changePage("login");
+  //     alert("Nesprávný email, heslo nebo kontrolní heslo.");
+  //   }
+  // }
 
   return (
     <div>
@@ -171,7 +171,6 @@ export default function App() {
         userLogin={userLogin}
         loginData={loginData}
         setLoginData={setLoginData}
-        handleLogin={handleLogin}
         isLoggedIn={isLoggedIn}
         emailList={emailList}
         setEmailList={setEmailList}
@@ -181,6 +180,8 @@ export default function App() {
         setNumberOfContracts={setNumberOfContracts}
         showInsuranceTypes={showInsuranceTypes}
         setShowInsuranceTypes={setShowInsuranceTypes}
+        setIsAdmin={setIsAdmin}
+        setIsLoggedIn={setIsLoggedIn}
       />
       <Footer />
     </div>
@@ -210,6 +211,8 @@ function Main({
   setNumberOfContracts,
   showInsuranceTypes,
   setShowInsuranceTypes,
+  setIsAdmin,
+  setIsLoggedIn,
 }) {
   // console.log(isAdmin);
 
@@ -251,6 +254,8 @@ function Main({
             setEmailList={setEmailList}
             passwordList={passwordList}
             setPasswordList={setPasswordList}
+            setIsAdmin={setIsAdmin}
+            setIsLoggedIn={setIsLoggedIn}
           />
         </div>
       )}

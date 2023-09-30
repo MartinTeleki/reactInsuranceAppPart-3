@@ -11,8 +11,64 @@ export default function NewLogin({
   setEmailList,
   passwordList,
   setPasswordList,
+  setIsAdmin,
+  setIsLoggedIn
 }) {
   //console.log(emailList);
+  function handleLogin(e) {
+    e.preventDefault();
+
+    const evidenceList = JSON.parse(localStorage.getItem("evidenceTEST")) || [];
+
+    const firstNames = [];
+    const emails = [];
+    const passwords = [];
+    const passwordControls = [];
+
+    evidenceList.forEach((item) => {
+      if (item.email && item.email.trim() !== "") {
+        emails.push(item.email);
+      }
+      if (item.password && item.password.trim() !== "") {
+        passwords.push(item.password);
+      }
+      if (item.controlPassword && item.controlPassword.trim() !== "") {
+        passwordControls.push(item.controlPassword);
+      }
+      if (item.firstName && item.firstName.trim() !== "") {
+        firstNames.push(item.firstName);
+      }
+    });
+
+    processLogin(emails, passwords, passwordControls, firstNames);
+  }
+
+  function processLogin(emails, passwords, passwordControls) {
+    const { email, password, controlPassword } = loginData;
+    let isLoggedIn = false;
+
+    for (let i = 0; i < emails.length; i++) {
+      if (
+        emails[i] === email &&
+        passwords[i] === password &&
+        passwordControls[i] === controlPassword
+      ) {
+        isLoggedIn = true;
+      }
+    }
+
+    if (isLoggedIn) {
+      alert("Úspěšně jste se přihlásili!");
+      if (email === "martinteleki@seznam.cze") {
+        setIsAdmin(true);
+      }
+      changePage("login-jmeno");
+      setIsLoggedIn(true);
+    } else {
+      changePage("login");
+      alert("Nesprávný email, heslo nebo kontrolní heslo.");
+    }
+  }
   return (
     <div className="container">
       <form method="post" autoComplete="on">
