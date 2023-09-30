@@ -493,7 +493,12 @@ export default function NewRegister({
         <div className="swap-login">
           <p style={{ color: "#fff" }}>
             Do you have already registered ?{" "}
-            <span onClick={() => changePage("login")}>
+            <span
+              onClick={() => {
+                changePage("login");
+                updateLocalStorageData();
+              }}
+            >
               <strong className="btn-login-swap" style={{ color: "#2496ff" }}>
                 Login
               </strong>
