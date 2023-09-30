@@ -155,6 +155,7 @@ export default function App() {
         setNumberOfContracts={setNumberOfContracts}
         setShowInsuranceTypes={setShowInsuranceTypes}
         showInsuranceTypes={showInsuranceTypes}
+        currentPage={currentPage}
       />
       <Main
         currentPage={currentPage}

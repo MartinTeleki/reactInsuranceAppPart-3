@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index.css";
 
 export function NavBar({
@@ -14,6 +14,7 @@ export function NavBar({
   setNumberOfContracts,
   setShowInsuranceTypes,
   showInsuranceTypes,
+  currentPage,
 }) {
   function UpdateLocalStorageData() {
     const storedEvidence =
@@ -24,7 +25,11 @@ export function NavBar({
 
     // console.log(storedEvidence);
   }
-  // console.log(isAdmin);
+
+  // const [activateNavItem, setActivateNavItem] = useState("");
+  // // console.log(isAdmin);
+
+  function handleChangeNavItemColor() {}
   return (
     <div>
       <nav className="navbar">
@@ -37,20 +42,30 @@ export function NavBar({
           <div className="bar"></div>
         </div>
         <ul className="nav-links" id="nav-links">
-          <NavInformation changePage={changePage} isLoggedIn={isLoggedIn} />
+          <NavInformation
+            changePage={changePage}
+            isLoggedIn={isLoggedIn}
+            currentPage={currentPage}
+          />
 
-          <NavRegister changePage={changePage} isLoggedIn={isLoggedIn} />
+          <NavRegister
+            changePage={changePage}
+            isLoggedIn={isLoggedIn}
+            currentPage={currentPage}
+          />
 
           <NavLogin
             changePage={changePage}
             isLoggedIn={isLoggedIn}
             UpdateLocalStorageData={UpdateLocalStorageData}
+            currentPage={currentPage}
           />
 
           <NavPojistenci
             changePage={changePage}
             isLoggedIn={isLoggedIn}
             isAdmin={isAdmin}
+            currentPage={currentPage}
           />
 
           <NavPojisteni
@@ -58,6 +73,7 @@ export function NavBar({
             isLoggedIn={isLoggedIn}
             setShowInsuranceTypes={setShowInsuranceTypes}
             showInsuranceTypes={showInsuranceTypes}
+            currentPage={currentPage}
           />
 
           {/* <NavUdalosti changePage={changePage} isLoggedIn={isLoggedIn} /> */}
@@ -66,12 +82,14 @@ export function NavBar({
             changePage={changePage}
             isLoggedIn={isLoggedIn}
             isAdmin={isAdmin}
+            currentPage={currentPage}
           />
 
           <NavContact
             changePage={changePage}
             isLoggedIn={isLoggedIn}
             isAdmin={isAdmin}
+            currentPage={currentPage}
           />
 
           <NavLoginJmeno
@@ -79,6 +97,7 @@ export function NavBar({
             isLoggedIn={isLoggedIn}
             loginData={loginData}
             evidenceList={evidenceList}
+            currentPage={currentPage}
           />
 
           <NavOdhlasit
@@ -86,18 +105,26 @@ export function NavBar({
             isLoggedIn={isLoggedIn}
             setIsLoggedIn={setIsLoggedIn}
             setIsAdmin={setIsAdmin}
+            currentPage={currentPage}
           />
         </ul>
       </nav>
     </div>
   );
 }
-function NavInformation({ changePage, isLoggedIn }) {
+function NavInformation({ changePage, isLoggedIn, currentPage }) {
   return (
     <div>
       {!isLoggedIn && (
         <li>
-          <a href="#" alt="informace" onClick={() => changePage("informace")}>
+          <a
+            href="#"
+            alt="informace"
+            onClick={() => {
+              changePage("informace");
+            }}
+            className={currentPage === "informace" ? "active" : ""}
+          >
             Informace
           </a>
         </li>
@@ -105,12 +132,17 @@ function NavInformation({ changePage, isLoggedIn }) {
     </div>
   );
 }
-function NavRegister({ changePage, isLoggedIn }) {
+function NavRegister({ changePage, isLoggedIn, currentPage }) {
   return (
     <div>
       {!isLoggedIn && (
         <li>
-          <a href="#" alt="registrace" onClick={() => changePage("register")}>
+          <a
+            href="#"
+            alt="registrace"
+            onClick={() => changePage("register")}
+            className={currentPage === "register" ? "active" : ""}
+          >
             Registrace
           </a>
         </li>
@@ -118,12 +150,22 @@ function NavRegister({ changePage, isLoggedIn }) {
     </div>
   );
 }
-function NavLogin({ changePage, isLoggedIn, UpdateLocalStorageData }) {
+function NavLogin({
+  changePage,
+  isLoggedIn,
+  UpdateLocalStorageData,
+  currentPage,
+}) {
   return (
     <div>
       {!isLoggedIn && (
         <li>
-          <a href="#" alt="login" onClick={UpdateLocalStorageData}>
+          <a
+            href="#"
+            alt="login"
+            onClick={UpdateLocalStorageData}
+            className={currentPage === "login" ? "active" : ""}
+          >
             Login
           </a>
         </li>
@@ -131,12 +173,17 @@ function NavLogin({ changePage, isLoggedIn, UpdateLocalStorageData }) {
     </div>
   );
 }
-function NavEvidence({ changePage, isLoggedIn, isAdmin }) {
+function NavEvidence({ changePage, isLoggedIn, isAdmin, currentPage }) {
   return (
     <div>
       {isAdmin && (
         <li>
-          <a href="#" alt="evidence" onClick={() => changePage("evidence")}>
+          <a
+            href="#"
+            alt="evidence"
+            onClick={() => changePage("evidence")}
+            className={currentPage === "evidence" ? "active" : ""}
+          >
             Evidence
           </a>
         </li>
@@ -144,13 +191,18 @@ function NavEvidence({ changePage, isLoggedIn, isAdmin }) {
     </div>
   );
 }
-function NavContact({ changePage, isLoggedIn, isAdmin }) {
+function NavContact({ changePage, isLoggedIn, isAdmin, currentPage }) {
   // console.log(isAdmin);
   return (
     <div>
       {!isAdmin && (
         <li>
-          <a href="#" alt="kontakt" onClick={() => changePage("contact")}>
+          <a
+            href="#"
+            alt="kontakt"
+            onClick={() => changePage("contact")}
+            className={currentPage === "contact" ? "active" : ""}
+          >
             Contact
           </a>
         </li>
@@ -158,12 +210,17 @@ function NavContact({ changePage, isLoggedIn, isAdmin }) {
     </div>
   );
 }
-function NavPojistenci({ changePage, isAdmin }) {
+function NavPojistenci({ changePage, isAdmin, currentPage }) {
   return (
     <div>
       {isAdmin && (
         <li>
-          <a href="#" alt="pojistenci" onClick={() => changePage("pojistenci")}>
+          <a
+            href="#"
+            alt="pojistenci"
+            onClick={() => changePage("pojistenci")}
+            className={currentPage === "pojistenci" ? "active" : ""}
+          >
             Pojištěnci
           </a>
         </li>
@@ -171,7 +228,12 @@ function NavPojistenci({ changePage, isAdmin }) {
     </div>
   );
 }
-function NavPojisteni({ changePage, isLoggedIn, setShowInsuranceTypes }) {
+function NavPojisteni({
+  changePage,
+  isLoggedIn,
+  setShowInsuranceTypes,
+  currentPage,
+}) {
   return (
     <div>
       {isLoggedIn && (
@@ -183,6 +245,7 @@ function NavPojisteni({ changePage, isLoggedIn, setShowInsuranceTypes }) {
               changePage("pojisteni");
               setShowInsuranceTypes(false);
             }}
+            className={currentPage === "pojisteni" ? "active" : ""}
           >
             Pojištění
           </a>
@@ -204,7 +267,13 @@ function NavPojisteni({ changePage, isLoggedIn, setShowInsuranceTypes }) {
 //     </div>
 //   );
 // }
-function NavOdhlasit({ changePage, isLoggedIn, setIsLoggedIn, setIsAdmin }) {
+function NavOdhlasit({
+  changePage,
+  isLoggedIn,
+  setIsLoggedIn,
+  setIsAdmin,
+  currentPage,
+}) {
   // console.log(setIsAdmin);
   return (
     <div>
@@ -218,6 +287,7 @@ function NavOdhlasit({ changePage, isLoggedIn, setIsLoggedIn, setIsAdmin }) {
               setIsLoggedIn(false);
               setIsAdmin(false);
             }}
+            className={currentPage === "odhlasit" ? "active" : ""}
           >
             Odhlásit
           </a>
@@ -226,7 +296,13 @@ function NavOdhlasit({ changePage, isLoggedIn, setIsLoggedIn, setIsAdmin }) {
     </div>
   );
 }
-function NavLoginJmeno({ changePage, isLoggedIn, loginData, evidenceList }) {
+function NavLoginJmeno({
+  changePage,
+  isLoggedIn,
+  loginData,
+  evidenceList,
+  currentPage,
+}) {
   const email = loginData.email;
   const person = evidenceList.find((osoba) => osoba.email === email);
 
@@ -238,6 +314,7 @@ function NavLoginJmeno({ changePage, isLoggedIn, loginData, evidenceList }) {
             href="#"
             alt="login-jmeno"
             onClick={() => changePage("login-jmeno")}
+            className={currentPage === "login-jmeno" ? "active" : ""}
           >
             {person.firstName}
           </a>

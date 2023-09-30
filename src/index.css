@@ -80,6 +80,14 @@ button {
   margin: 0.1875rem 0;
 }
 
+.nav-links a {
+  color: white;
+}
+
+.nav-links .active {
+  color: #a2ff00;
+}
+
 /* Main */
 
 .main {
