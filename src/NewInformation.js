@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./newInformation.css";
 
 export function NewInformation({ evidenceList, numberOfContracts }) {
-
   const informationFromJSON =
     JSON.parse(localStorage.getItem("evidenceTEST")) || [];
 
@@ -29,7 +28,7 @@ export function NewInformation({ evidenceList, numberOfContracts }) {
     contractValue: totalContractValue,
     discount: 80,
     moneyPayout: 3,
-    insuranceAmount: totalInsuranceAmount / evidenceList.length,
+    insuranceAmount: totalInsuranceAmount,
   };
 
   const styles = {
@@ -48,7 +47,7 @@ export function NewInformation({ evidenceList, numberOfContracts }) {
     }, 1000);
 
     return () => {
-      clearInterval();
+      clearInterval(intervalId);
     };
   }, []);
 
@@ -106,7 +105,8 @@ export function NewInformation({ evidenceList, numberOfContracts }) {
     <div className="informace-container">
       <p>
         <span style={{ color: styles.textColor }}>{greeting}</span>, srdečně Vás
-        vítáme v naší React pojišťovně.
+        vítáme v naší React pojišťovně, kde jsme pro vás připravili jedinečnou
+        cestu k finanční jistotě.
       </p>
       <p>
         {info.numberOfClients > 0 && info.numberOfContracts > 0 ? (
@@ -130,7 +130,7 @@ export function NewInformation({ evidenceList, numberOfContracts }) {
         )}
       </p>
       <p>
-        Naše pojišťovna existuje již od roku {info.companySetUp}. Již jsme našim
+        Jsme pojišťovna s tradicí od roku {info.companySetUp}. Již jsme našim
         klient{info.numberOfClients !== 1 ? "ům" : "ovi"} vyplatili{" "}
         <span style={{ color: styles.textColor }}>{info.contractValue}$</span>.
         Naši klient{info.numberOfClients !== 1 ? "i" : ""} jsou pojištěni
@@ -141,7 +141,7 @@ export function NewInformation({ evidenceList, numberOfContracts }) {
       <p>
         Pokud hledáte férovou pojišťovnu, která Vám vyplatí nejpozději do{" "}
         <span style={{ color: styles.textColor }}>{info.moneyPayout}.</span> dne
-        vaší pohledávku.
+        vaší pohledávku, jste na správném místě.
       </p>
       <p className="time">
         {" "}
