@@ -2,11 +2,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
 
-.evidence-margin {
-  margin-top: 1.25rem;
-  margin-bottom: 12.5rem;
-}
-
 .evidence-container {
   display: flex;
   position: relative;
@@ -16,8 +11,9 @@
   height: auto;
   max-width: 100%;
   border: 0.03125rem solid black;
-  margin: 6.25rem 15% 0 15%;
-  letter-spacing: 0.6px;
+  margin: 50px 20px 50px 20px;
+
+  /* letter-spacing: 0.6px; */
 }
 
 .evidence-item-title {
@@ -59,6 +55,7 @@
   display: flex;
   justify-content: center;
   background: #2d3e3f;
+  opacity: 0.9;
 }
 
 .btn-delete {
@@ -92,10 +89,6 @@
 }
 
 /* time */
-.time {
-  font-family: "Orbitron", sans-serif;
-  color: #a2ff00;
-}
 
 @media screen and (max-width: 31.25rem) {
   .evidence-item {

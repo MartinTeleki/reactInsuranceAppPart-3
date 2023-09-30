@@ -6,7 +6,10 @@ export function Footer() {
     <div className="footer">
       <p>
         &copy; Created by{" "}
-        <a href="#" className="footer-link">
+        <a
+          href="https://github.com/MartinTeleki?tab=repositories"
+          className="footer-link"
+        >
           Mgr. Martin Teleki
         </a>
       </p>

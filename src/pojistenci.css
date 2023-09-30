@@ -13,6 +13,7 @@ html {
   border: 0.0625rem solid black;
   overflow: hidden;
   color: white;
+  background: #0e7a80;
 }
 
 .title-container {
@@ -264,7 +265,7 @@ button[type="submit"]:hover {
   background-color: #f0f0f0;
   padding: 0.625rem;
   border: 0.0625rem solid #ccc;
-  border-radius: 0.3125rem;
+  border-radius: 5.3125rem;
   margin-top: 0.625rem;
 }
 
@@ -296,10 +297,10 @@ button[type="submit"]:hover {
 
 .policyholder-edit {
   background-color: #f0f0f0;
-  padding: 1.25rem;
+  padding: 1.9rem;
   border: 0.0625rem solid #ccc;
   border-radius: 0.3125rem;
-  margin: 1.25rem 0;
+  margin: 1.25rem 40px;
 }
 
 .policyholder-edit h3 {
