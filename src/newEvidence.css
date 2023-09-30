@@ -88,7 +88,7 @@
   transform: scale(0.88);
 }
 
-/* time */
+/* media for smaller app */
 
 @media screen and (max-width: 31.25rem) {
   .evidence-item {

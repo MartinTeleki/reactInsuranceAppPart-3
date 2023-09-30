@@ -1,3 +1,5 @@
+/* contact css  */
+
 .contact-container {
   background-color: #f5f5f5;
   padding: 1.25rem; 
@@ -29,8 +31,7 @@
   align-items: center;
 }
 
-.fontLabel {
-}
+
 
 .black-icon-contact {
   color: #000;
@@ -72,6 +73,8 @@
   text-decoration: underline;
 }
 
+
+/* media for smaller screen */
 @media (max-width: 60.625rem) { 
   * {
     margin: 0;

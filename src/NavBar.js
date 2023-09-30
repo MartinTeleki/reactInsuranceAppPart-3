@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./index.css";
-
+import "./navbar.css";
 export function NavBar({
   toggleMenu,
   changePage,

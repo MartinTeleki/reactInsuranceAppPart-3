@@ -3,6 +3,7 @@ html {
   letter-spacing: 0.6px;
 }
 
+/* body of application */
 body {
   margin: 0;
   padding: 0;
@@ -23,7 +24,7 @@ button {
   border-radius: 0.625rem;
 }
 
-.navbar {
+/* .navbar {
   margin: 0;
   background-color: #333;
   color: #fff;
@@ -65,7 +66,7 @@ button {
 }
 
 /* -Hamburger- */
-.bar-container {
+/* .bar-container {
   display: none;
   cursor: pointer;
   flex-direction: column;
@@ -86,7 +87,9 @@ button {
 
 .nav-links .active {
   color: #a2ff00;
-}
+} */
+*/
+
 
 /* Main */
 
@@ -98,7 +101,7 @@ button {
 /* Register */
 
 /* Footer */
-.footer {
+/* .footer {
   text-decoration: none;
   background-color: #333;
   color: #fff;
@@ -116,9 +119,9 @@ button {
 }
 .footer-link:hover {
   text-decoration: underline;
-}
+} */
 
-@media screen and (max-width: 43.75rem) {
+/* @media screen and (max-width: 43.75rem) {
   .bar-container {
     display: flex;
   }
@@ -132,4 +135,4 @@ button {
     flex-direction: column;
     align-items: center;
   }
-}
+} */
