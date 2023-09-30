@@ -103,13 +103,14 @@ export default function NewLogin({
         {/* Repassword */}
 
         <div className="swap-register">
-          <p style={{ color: "#fff" }}>
+          <p style={{ color: "#fff", marginTop: "20px" }}>
             Dont you have an acc yet?{" "}
             <span onClick={() => changePage("register")}>
               <strong
                 className="btn-register-swap"
                 style={{ color: "#2496ff" }}
               >
+                <br />
                 Register
               </strong>
             </span>
