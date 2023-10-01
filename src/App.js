@@ -49,6 +49,7 @@ export default function App() {
 
   function changePage(page) {
     setCurrentPage(page);
+    document.title = `Pojišťovna React/${page}`;
   }
   return (
     <div>
