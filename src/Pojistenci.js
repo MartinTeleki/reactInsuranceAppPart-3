@@ -11,7 +11,6 @@ export default function Pojistenci() {
   const [showForm, setShowForm] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
-
   useEffect(() => {
     const storedEvidence =
       JSON.parse(localStorage.getItem("evidenceTEST")) || [];
@@ -187,8 +186,6 @@ function PolicyholderFormWrapper({
   amountPages,
   detailPolicyHolder,
   setEditingPolicyholder,
-  showEdit,
-  setShowEdit,
   editHandleShowButton,
 }) {
   return (
@@ -276,8 +273,6 @@ function PolicyholderEditWrapper({
   editPolicyholder,
   cancelEdit,
   setShowEdit,
-  showEdit,
-  editHandleShowButton,
 }) {
   const [insuranceType, setInsuranceType] = useState(
     policyholder.insuranceType

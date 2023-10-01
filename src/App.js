@@ -37,7 +37,6 @@ export default function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
 
-
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
@@ -112,7 +111,6 @@ function Main({
   loginData,
   setLoginData,
   handleLogin,
-  isLoggedIn,
   emailList,
   setEmailList,
   passwordList,
@@ -124,8 +122,6 @@ function Main({
   setIsAdmin,
   setIsLoggedIn,
 }) {
-
-
   return (
     <div className="">
       {currentPage === "informace" && (
@@ -211,6 +207,4 @@ function Main({
       )}
     </div>
   );
-
-
 }

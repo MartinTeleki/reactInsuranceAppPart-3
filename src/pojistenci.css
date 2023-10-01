@@ -129,6 +129,7 @@ html {
 
 .btn-editovat {
   background: var(--button-edit-color);
+  margin-right: 20px;
 }
 
 .btn-odstranit {

@@ -183,8 +183,7 @@ function NavEvidence({ changePage, isLoggedIn, isAdmin, currentPage }) {
     </div>
   );
 }
-function NavContact({ changePage, isLoggedIn, isAdmin, currentPage }) {
-
+function NavContact({ changePage, isAdmin, currentPage }) {
   return (
     <div>
       {!isAdmin && (
@@ -195,7 +194,7 @@ function NavContact({ changePage, isLoggedIn, isAdmin, currentPage }) {
             onClick={() => changePage("contact")}
             className={currentPage === "contact" ? "active" : ""}
           >
-            Contact
+            Kontakt
           </a>
         </li>
       )}
