@@ -26,7 +26,7 @@ export default function App() {
     termsAccepted: false,
   };
 
-  const [currentPage, setCurrentPage] = useState("contact");
+  const [currentPage, setCurrentPage] = useState("informace");
   const [evidenceList, setEvidenceList] = useState([]);
   const [numberOfContracts, setNumberOfContracts] = useState([]);
   const [registrationInfo, setRegistrationInfo] = useState(

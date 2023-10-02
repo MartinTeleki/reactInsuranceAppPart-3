@@ -2,7 +2,6 @@ import React from "react";
 import "./index.css";
 import "./navbar.css";
 export function NavBar({
-  toggleMenu,
   changePage,
   isLoggedIn,
   loginData,
@@ -24,11 +23,16 @@ export function NavBar({
     changePage("login");
   }
 
+  function toggleMenu() {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("show-menu");
+  }
+
   return (
     <div>
       <nav className="navbar">
         <div className="logo">
-          <p>Pojišťovna React</p>
+          <p>Pojistovna React</p>
         </div>
         <div className="bar-container" onClick={toggleMenu}>
           <div className="bar"></div>
@@ -142,12 +146,7 @@ function NavRegister({ changePage, isLoggedIn, currentPage }) {
     </div>
   );
 }
-function NavLogin({
-  changePage,
-  isLoggedIn,
-  UpdateLocalStorageData,
-  currentPage,
-}) {
+function NavLogin({ isLoggedIn, UpdateLocalStorageData, currentPage }) {
   return (
     <div>
       {!isLoggedIn && (
@@ -165,7 +164,7 @@ function NavLogin({
     </div>
   );
 }
-function NavEvidence({ changePage, isLoggedIn, isAdmin, currentPage }) {
+function NavEvidence({ changePage, isAdmin, currentPage }) {
   return (
     <div>
       {isAdmin && (

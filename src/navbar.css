@@ -1,9 +1,11 @@
 /* navbar of app */
 
-:root {
---background-color-black: #333;
---color-white: #fff;
---background-color-green: #a2ff00
+@import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
+
+root {
+  --background-color-black: #333;
+  --color-white: #fff;
+  --background-color-green: #a2ff00;
 }
 
 .navbar {
@@ -24,6 +26,7 @@
 .logo {
   margin-left: 0.625rem;
   margin-right: 0.625rem;
+  font-family: "Codystar", sans-serif;
 }
 
 .nav-links {

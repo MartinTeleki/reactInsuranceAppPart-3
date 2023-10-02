@@ -123,6 +123,7 @@ select {
   background: var(--background-color-green);
   opacity: 0.9;
   transform: scale(0.96);
+  cursor: pointer;
 }
 
 .terms {
