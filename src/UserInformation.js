@@ -1,10 +1,11 @@
 import React from "react";
 import "./userInformation.css";
+import randomUserDataList from "./data";
 
 export function UserInformation({ loginData, evidenceList }) {
   const user = evidenceList.find((person) => person.email === loginData.email);
-  console.log(evidenceList);
-  console.log(user);
+  // console.log(evidenceList);
+  // console.log(user);
 
   return (
     <div className="user-info-container">

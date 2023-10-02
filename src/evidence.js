@@ -15,7 +15,6 @@ export default function NewEvidence({ evidenceList, setEvidenceList }) {
     localStorage.setItem("evidence", JSON.stringify(updatedEvidenceList));
 
     setEvidenceList(updatedEvidenceList);
-    console.log(evidenceList);
   }
   return (
     <div>

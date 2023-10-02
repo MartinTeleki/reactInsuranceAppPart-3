@@ -53,7 +53,7 @@ export default function NewLogin({
 
     if (isLoggedIn) {
       alert("Úspěšně jste se přihlásili!");
-      if (email === "martinteleki@seznam.cze") {
+      if (email === "Martinteleki@seznam.cz") {
         setIsAdmin(true);
       }
       changePage("login-jmeno");
